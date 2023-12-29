@@ -32,3 +32,4 @@ def register_view(request):
 
 def header_view(request):
     return render(request, 'header.html')
+
