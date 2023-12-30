@@ -30,8 +30,10 @@
         <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
     </head>
 <body>
-    <div  id="myModal2" tabindex="-1" role="dialog">
-		<div >
+    <!-- signup Model -->
+	<!-- Modal2 -->
+	<div >
+		<div id="myModal2" tabindex="-1" role="dialog">
 			<!-- Modal content-->
 			<div class="modal-content">
 				<div class="modal-header">
@@ -48,23 +50,24 @@
 						</p>
 						<form action="{% url 'register' %}" method="post">
 							{% csrf_token %}
+							<center>{{msg}} </center>
 							<div class="styled-input agile-styled-input-top">
-								<input type="text" placeholder="Full Name" name="full_name" required="">
+								<input type="text" placeholder="Name" name="full_name" required="">
 							</div>
 							<div class="styled-input">
-								<input type="email" placeholder="E-mail" name="email" required="">
-							</div>
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" placeholder="Phone No." name="mobile" required="">
-							</div>
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" placeholder="Address" name="address" required="">
+								<input type="email" placeholder="E-mail" name="email_id" required="">
 							</div>
 							<div class="styled-input">
 								<input type="password" placeholder="Password" name="password" id="password1" required="">
 							</div>
 							<div class="styled-input">
 								<input type="password" placeholder="Confirm Password" name="cpassword" id="password2" required="">
+							</div>
+							<div class="styled-input">
+								<input type="text" placeholder="Address" name="address" id="address" required="">
+							</div>
+							<div class="styled-input">
+								<input type="text" placeholder="Phone Number" name="phone_no" id="phone_no" required="">
 							</div>
 							<input type="submit" value="Sign Up">
 						</form>
@@ -77,5 +80,7 @@
 			<!-- //Modal content-->
 		</div>
 	</div>
+	<!-- //Modal2 -->
+	<!-- //signup Model -->
 </body>
 </html>
